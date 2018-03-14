@@ -1,0 +1,22 @@
+{
+  "plugins": [
+    "react"
+  ],
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": "airbnb" ,
+  "rules": {
+    "quotes": 0,
+    "prefer-template": 1,
+    "react/jsx-filename-extension": 0,
+    "react/forbid-prop-types": 1,
+    "react/no-string-refs": 1,
+    "react/prefer-stateless-function": 0,
+    "import/extensions": 0,
+    "linebreak-style": 0,
+    "max-len": 0
+  }
+}
