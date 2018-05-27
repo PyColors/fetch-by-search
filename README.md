@@ -1,7 +1,7 @@
-# Infrastructure [![Build Status](https://travis-ci.org/PyColors/gousto.svg?branch=master)](https://travis-ci.org/PyColors/Newspaper)
+# fetch-by-search
  
-This project offers a number of product operations. There is a call to get products
-on current menu and another call to list all available categories.
+This project offers a number of product operations. 
+There is a call to get products. On the current menu another call to list all available categories.
  
 ### Installation
 
@@ -42,11 +42,4 @@ MIT
 ##### Project Information
 * Created with [create-react-app](https://github.com/facebookincubator/create-react-app)
 
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
-
-   [Styled-components]: <https://github.com/styled-components/styled-components>
-   [Storybook]: <https://github.com/storybooks/storybook>
-   [Enzyme]: <https://github.com/airbnb/enzyme>
  
-
-

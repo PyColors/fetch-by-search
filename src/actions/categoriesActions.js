@@ -1,10 +1,9 @@
 import * as allActions from './allActions';
- 
 
-export function fetchCategories () {
+
+export function fetchCategories() {
     return (dispatch) => {
         fetch('api/categories.json')
-            //    fetch('https://api.gousto.co.uk/products/v2.0/categories')
             .then(response =>
                 response.json().then(data => ({
                     data: data.data,
@@ -14,20 +13,22 @@ export function fetchCategories () {
             .then(response => {
                 if (response.status === 200) {
                     dispatch(receiveCategories(response.data))
-                } 
+                }
             })
             .catch((error) => {
                 const response = error.response;
                 if (response === undefined) {
                     dispatch(fetchFailure(error));
-                } else {
+                }
+                else {
                     error.status = response.status;
                     error.statusText = response.statusText;
                     response.text().then((text) => {
                         try {
                             const json = JSON.parse(text);
                             error.message = json.message;
-                        } catch (ex) {
+                        }
+                        catch (ex) {
                             error.message = text;
                         }
                         dispatch(fetchFailure(error));
@@ -47,6 +48,3 @@ export const fetchFailure = (error) => ({
     type: allActions.FAILED_RECIEVE_CATEGORIES,
     error,
 })
-
-
-

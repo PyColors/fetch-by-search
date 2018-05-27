@@ -4,7 +4,6 @@ import { hashHistory } from "react-router";
 import { bindActionCreators } from "redux";
 import * as categoriesActions from "../../actions/categoriesActions";
 import * as productsActions from "../../actions/productsActions";
-import logo from "../../images/gousto-logo.svg";
 import PropTypes from "prop-types";
 
 import { Layout, Menu, Breadcrumb, Icon, Input, BackTop } from "antd";
@@ -25,7 +24,7 @@ class CategoriesList extends React.Component {
     );
 
     let categorySelected = e.target.innerHTML.replace(/\s/g, "-").toLowerCase();
-    // Remplace spaces by "-" and convert value to lowercase letters:
+    // Replace spaces by "-" + lowercase letters:
     categorySelected = categorySelected.replace(/\s/g, "-").toLowerCase();
     hashHistory.push(`/${categorySelected}`);
 
@@ -39,7 +38,8 @@ class CategoriesList extends React.Component {
     if (categorySelected === lastLevelLocation) {
       console.log("match! URL");
       e.target.style.fontWeight = "bold";
-    } else {
+    }
+    else {
       e.target.style.fontWeight = "";
     }
 
@@ -51,7 +51,8 @@ class CategoriesList extends React.Component {
       h3 = li[i].getElementsByTagName("h3")[0];
       if (h3.innerHTML.toUpperCase().indexOf(filter) > -1) {
         li[i].style.display = "";
-      } else {
+      }
+      else {
         li[i].style.display = "none";
       }
     }
@@ -69,7 +70,8 @@ class CategoriesList extends React.Component {
       h3 = li[i].getElementsByTagName("h3")[0];
       if (h3.innerHTML.toUpperCase().indexOf(filter) > -1) {
         li[i].style.display = "";
-      } else {
+      }
+      else {
         li[i].style.display = "none";
       }
     }
@@ -79,19 +81,13 @@ class CategoriesList extends React.Component {
 
     if (!this.props.categories) {
       return <div><Icon type="loading" /></div>;
-    } else {
+    }
+    else {
       return (
         <Layout className="layout">
           <Header className="header">
             <div className="layout__logo">
-              <img className="layout__logo-img" src={logo} alt="Gousto" />
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/PyColors/gousto"
-              >
-                <Icon type="github" className="layout__logo-link-github" />
-              </a>
+              <Icon type="github" className="layout__logo-link-github" />
             </div>
           </Header>
           <Content style={{ padding: "0 180px" }}>
@@ -155,7 +151,7 @@ class CategoriesList extends React.Component {
               </Content>
             </Layout>
           </Content>
-          <Footer style={{ textAlign: "center" }}>Gousto</Footer>
+          <Footer style={{ textAlign: "center" }}>Made with ♥ by <a href="www.pycolors.com">Py Colors</a></Footer>
         </Layout>
       );
     }
