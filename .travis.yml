@@ -8,6 +8,8 @@ node_js:
 script:
   - npm test
   - npm test-ci
+  - npm build
+  
 
 cache:
   yarn: true
