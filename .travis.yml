@@ -1,0 +1,14 @@
+language: node_js
+
+os: osx
+
+node_js:
+  - 10
+  
+script:
+  - npm test
+  - npm test-ci
+
+cache:
+  yarn: true
+  directories:
