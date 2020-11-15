@@ -6,9 +6,9 @@ node_js:
   - 10
   
 script:
-  - npm test
-  - npm test-ci
-  - npm build
+  - yarn test
+  - yarn test-ci
+  - yarn build
   
 
 cache:
